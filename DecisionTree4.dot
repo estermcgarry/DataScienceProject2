@@ -1,0 +1,36 @@
+digraph Tree {
+node [shape=box] ;
+0 [label="intake_type_Wildlife <= 0.5\ngini = 0.166\nsamples = 700\nvalue = [636, 64]\nclass = y[0]"] ;
+1 [label="intake_condition_Injured <= 0.5\ngini = 0.094\nsamples = 669\nvalue = [636, 33]\nclass = y[0]"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="intake_condition_Sick <= 0.5\ngini = 0.069\nsamples = 642\nvalue = [619, 23]\nclass = y[0]"] ;
+1 -> 2 ;
+3 [label="animal_breed_Bat <= 0.5\ngini = 0.054\nsamples = 618\nvalue = [601, 17]\nclass = y[0]"] ;
+2 -> 3 ;
+4 [label="gini = 0.051\nsamples = 617\nvalue = [601, 16]\nclass = y[0]"] ;
+3 -> 4 ;
+5 [label="gini = 0.0\nsamples = 1\nvalue = [0, 1]\nclass = y[1]"] ;
+3 -> 5 ;
+6 [label="time_in_shelter_days_imputation <= 0.5\ngini = 0.375\nsamples = 24\nvalue = [18, 6]\nclass = y[0]"] ;
+2 -> 6 ;
+7 [label="gini = 0.444\nsamples = 9\nvalue = [3, 6]\nclass = y[1]"] ;
+6 -> 7 ;
+8 [label="gini = 0.0\nsamples = 15\nvalue = [15, 0]\nclass = y[0]"] ;
+6 -> 8 ;
+9 [label="time_in_shelter_days_imputation <= 0.5\ngini = 0.466\nsamples = 27\nvalue = [17, 10]\nclass = y[0]"] ;
+1 -> 9 ;
+10 [label="month_outcome_10 <= 0.5\ngini = 0.397\nsamples = 11\nvalue = [3, 8]\nclass = y[1]"] ;
+9 -> 10 ;
+11 [label="gini = 0.198\nsamples = 9\nvalue = [1, 8]\nclass = y[1]"] ;
+10 -> 11 ;
+12 [label="gini = 0.0\nsamples = 2\nvalue = [2, 0]\nclass = y[0]"] ;
+10 -> 12 ;
+13 [label="animal_color_Tricolor <= 0.5\ngini = 0.219\nsamples = 16\nvalue = [14, 2]\nclass = y[0]"] ;
+9 -> 13 ;
+14 [label="gini = 0.124\nsamples = 15\nvalue = [14, 1]\nclass = y[0]"] ;
+13 -> 14 ;
+15 [label="gini = 0.0\nsamples = 1\nvalue = [0, 1]\nclass = y[1]"] ;
+13 -> 15 ;
+16 [label="gini = 0.0\nsamples = 31\nvalue = [0, 31]\nclass = y[1]"] ;
+0 -> 16 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
